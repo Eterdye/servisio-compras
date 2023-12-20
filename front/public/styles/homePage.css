@@ -1,0 +1,178 @@
+
+.descuento{
+  width:400px;
+  height:630px;
+  background-color: rgb(247, 233,228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  flex-direction: column;
+  transition: all ease 0.4s;
+
+}
+
+.image-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  width: 100%;
+}
+
+.img-descuento{
+  width:400px;
+  height:630px;
+  display: inline;
+  border-radius: 10px;
+  margin: 30px 25px;
+}
+.h2-homePage {
+  margin: 20px 0;
+}
+
+.box-text1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.699);
+}
+
+.btn-pedido-home{
+  margin:40px 20px;
+  padding:20px 30px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.664);
+  border-radius: 3px;
+}
+
+.btn-pedido-home:hover{
+  transition: all ease 0.4s;
+  background-color: rgba(0, 0, 0, 0.356);
+  cursor: pointer;
+}
+.grid-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto;
+  gap: 35px;
+  grid-template-areas:
+    "title title"
+    "image1 image2";
+}
+
+.box1 {
+  grid-area: title;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+.box2 {
+  grid-area: image1;
+  background-color: #e0e0e0;
+  padding: 20px; /* Ajustado el padding */
+  height: 480px;
+  background-image: url(../assets/panes1.jpg);
+  box-sizing: border-box;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+
+}
+
+.box3 {
+  grid-area: image2;
+  background-color: #d0d0d0;
+  padding: 20px; /* Ajustado el padding */
+  height: 480px;
+  background-image: url(../assets/img-sobreMi/woman-p.jpg);
+  background-repeat: no-repeat;
+  background-size:  100% 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.bar-vistas{
+  display: grid;
+  grid-template-columns:repeat(8,160px);
+  grid-template-rows: 160px;
+  gap: 20px;
+
+}
+
+.vistas-compra1{
+  background-image:url(../assets/images.jpeg );
+}
+
+.vistas-compra2{
+  background-image:url(../assets/images1.jpeg );
+}
+.vistas-compra3{
+  background-image:url(../assets/images2.jpeg );
+}
+.vistas-compra4{
+  background-image:url(../assets/images3.jpeg );
+}
+.vistas-compra5{
+  background-image:url(../assets/images4.jpeg );
+}
+.vistas-compra6{
+  background-image:url(../assets/images5.jpeg );
+}
+.vistas-compra7{
+  background-image:url(../assets/images6.jpeg );
+}
+.vistas-compra8{
+  background-image:url(../assets/images7.jpg );
+}
+
+.regis-h3{
+  margin-bottom: 60px;
+
+}
+.regis{
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.input-suscribir{
+  padding: 15px;
+  width: 290px;
+  font-weight: bold;
+}
+.btn-suscribir{
+  padding: 15px;
+  width: 290px;
+  background-color: rgba(0, 0, 0, 0.603);
+  color: #ffffffe7;
+  font-weight: bold;
+}
+
+.btn-suscribir:hover{
+  cursor: pointer;
+  background-color:rgba(0, 0, 0, 0.767);
+  transition: ease all 0.4s;
+}
+
+.footer{
+  width: 100%;
+  background-color:rgb(247, 233,228);
+  height: 90px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

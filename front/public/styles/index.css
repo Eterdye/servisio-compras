@@ -3,28 +3,28 @@
     margin:0;
 }
 
-
 body {
     background-color: rgb(250,250,250);
     font-family:'calibri';
 }
-
-.header-bar{
+.navBar{
+    position: fixed;
     width: 100%;
-    height: 70px;
-    background:linear-gradient(to top, transparent,rgba(197, 197, 197, 0.527));
-}
-
-.mainSection {
-    margin-top:80px;
+    height: 66px;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    background:linear-gradient(to top, transparent, rgba(0, 0, 0, 0.301));
+    background-color: #fff;
 }
 
 .black-line {
-    width: 80%;
-    height: 4px;
-    background-color: rgba(0, 0, 0, 0.74);
-    margin-top: 30px;
+    width: 90%;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.678);
+    margin-top: 20px;
     margin-right: 15px;
+    border-radius: 10px;
 }
 
 .header-bar{
@@ -69,11 +69,21 @@ position: relative;
 top: 6px;
 }
 
-.caja-secion{
-    margin-top: 20px;
-}
 
 .slogin{
     margin-left: 10px;
 }
 
+.main-page{
+    margin:120px auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.caja-secion{
+    position: relative;
+    top: 13px;
+}
