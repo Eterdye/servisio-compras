@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicio de compras</title>
-    <link rel="stylesheet" href="./public/styles/header.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./public/styles/index.css" />
+  </head>
+  <body>
     <section id="header">
-        <header class="navBar">
-            <div class="header-bar">
+      <header class="navBar">
+        <div class="header-bar">
+          <div class="caja-secion">
+            <img
+              src="./public/assets/logo-inicio.png"
+              alt=""
+              class="logo-inicio"
+            />
+            <a href="#" class="slogin">Iniciar seccion</a>
+          </div>
 
-            <img src="" alt="">
-             
-            <a href="#" id="home" name="Inicio">Inicio</a>
-            <a href="#" id="details" name="detalles">Detalles</a>
-            <a href="#" id="orders" name="pedidos">Pedidos</a>
-            <a href="#" id="contact" name="Contacto">Contacto</a>
+          <div class="nav-bar">
+            <a href="#" id="home" name="Inicio" class="link-nav">Inicio</a>
+            <a href="#" id="details" name="detalles" class="link-nav"
+              >Detalles</a
+            >
+            <a href="#" id="orders" name="pedidos" class="link-nav">Pedidos</a>
+            <a href="#" id="contact" name="Contacto" class="link-nav"
+              >Contacto</a
+            >
+          </div>
 
-            <div class="logo">
-                <img src="" alt="Logo de la empresa">
-            </div>
+          <div class="logo">
+            <img src="./public/assets/instagran.png" class="logo-empresas" />
 
-            <div class="logo">
-                <img src="" alt="Logo de la empresa">
-            </div>
+            <img
+              src="./public/assets/twiter.png"
+              alt="Logo de la empresa"
+              class="logo-empresas"
+            />
 
-            <div class="logo">
-                <img src="" alt="Logo de la empresa">
-            </div>
+            <img
+              src="./public/assets/pinterest.png"
+              alt="Logo de la empresa"
+              class="logo-empresas"
+            />
 
-            <div class="logo">
-                <img src="" alt="Logo de la empresa">
-            </div>
-
-            <div class="black-line"></div>
-
-            </div>
-        </header>
+            <img
+              src="./public/assets/facebook.png"
+              alt="Logo de la empresa"
+              class="logo-empresas"
+            />
+          </div>
+          <div class="black-line"></div>
+        </div>
+      </header>
     </section>
 
-    <main id="mainSection"></main>
-
+    <main id="mainSection" class="mainSection"></main>
 
     <script src="./src/general.js"></script>
-</body>
+  </body>
 </html>

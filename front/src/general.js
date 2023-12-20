@@ -4,10 +4,9 @@ const orders_button = document.querySelector('#orders')
 const contact_button = document.querySelector('#contact')
 
 
+function updateToSection (evt) {
 
-function updateToSection (evt, section) {
-
-    let actSection = evt.target
+    let actSection = evt ? evt.target : home_button
 
     fetch(`./public/${actSection.name}.html`)
     .then(res => res.text())
@@ -16,7 +15,9 @@ function updateToSection (evt, section) {
 
 }
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    updateToSection();
+});
 
 home_button.addEventListener('click', updateToSection)
 details_button.addEventListener('click', updateToSection)
