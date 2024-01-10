@@ -87,3 +87,18 @@ top: 6px;
     position: relative;
     top: 13px;
 }
+
+.footer{
+    width: 100%;
+    background-color:rgb(247, 233,228);
+    height: 90px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainSection {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}

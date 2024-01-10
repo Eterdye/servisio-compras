@@ -1,35 +1,26 @@
-const home_button = document.querySelector('#home')
-const details_button = document.querySelector('#details')
-const orders_button = document.querySelector('#orders')
-const contact_button = document.querySelector('#contact')
+const buttons = document.querySelectorAll('.link-nav');
 
-
-const sectionContent = {};
 
 function updateToSection(evt) {
-    const targetButton = evt ? evt.target : home_button;
-    const sectionName = targetButton.name;
+  const targetButton = evt ? evt.target : buttons[0];
+  const sectionName = targetButton.name;
+  const mainSection = document.querySelector('#mainSection');
 
-    if (sectionContent[sectionName]) {
-        document.querySelector('#mainSection').innerHTML = sectionContent[sectionName];
-    } else {
-        fetch(`./public/${sectionName}.html`)
-            .then(res => res.text())
-            .then(dataSection => {
-                // Almacenar el contenido de la sección
-                sectionContent[sectionName] = dataSection;
-                document.querySelector('#mainSection').innerHTML = dataSection;
-            })
-            .catch(err => console.log('Error al cargar:', err));
+  fetch('index')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
+    return response.text();
+  })
+    .then(indexHtml => {
+          mainSection.innerHTML = indexHtml;
+    })
+    .catch(error => console.error(error));
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    updateToSection();
+  updateToSection();
 });
 
-
-home_button.addEventListener('click', updateToSection)
-details_button.addEventListener('click', updateToSection)
-orders_button.addEventListener('click', updateToSection)
-contact_button.addEventListener('click', updateToSection)
+buttons.forEach((element) => element.addEventListener("click", updateToSection));

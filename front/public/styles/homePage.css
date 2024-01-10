@@ -1,4 +1,6 @@
 
+
+
 .descuento{
   width:400px;
   height:630px;
@@ -105,41 +107,51 @@
 
 .bar-vistas{
   display: grid;
-  grid-template-columns:repeat(8,160px);
-  grid-template-rows: 160px;
+  grid-template-columns:repeat(8,130px);
+  grid-template-rows: 130px;
   gap: 20px;
 
 }
 
 .vistas-compra1{
   background-image:url(../assets/images.jpeg );
+  background-position: center;
+
 }
 
 .vistas-compra2{
   background-image:url(../assets/images1.jpeg );
+  background-position: center;
 }
 .vistas-compra3{
   background-image:url(../assets/images2.jpeg );
+  background-position: center;
+
 }
 .vistas-compra4{
   background-image:url(../assets/images3.jpeg );
+  background-position: center;
 }
 .vistas-compra5{
   background-image:url(../assets/images4.jpeg );
+  background-position: center;
+
 }
 .vistas-compra6{
   background-image:url(../assets/images5.jpeg );
+  background-position: center;
 }
 .vistas-compra7{
   background-image:url(../assets/images6.jpeg );
+  background-position: center;
 }
 .vistas-compra8{
   background-image:url(../assets/images7.jpg );
+  background-position: center;
 }
 
 .regis-h3{
   margin-bottom: 60px;
-
 }
 .regis{
   margin-top: 140px;
@@ -167,12 +179,7 @@
   transition: ease all 0.4s;
 }
 
-.footer{
-  width: 100%;
-  background-color:rgb(247, 233,228);
-  height: 90px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.vistas-compra:hover{
+  filter:brightness(60%);
 }
