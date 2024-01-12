@@ -1,14 +1,9 @@
-function routes(rut){
-    let rutas = {
-        contacto: 'front/public/contacto.html',
-        detalles: 'front/public/detalles.html',
-        index: 'front/public/index.html',
-        inicio: 'front/public/inicio.html',
-        pedidos: 'front/public/pedidos.html',
-    }
+const routes = [
+  { httpMethod: 'get', name: '/contacto', route: 'front/public/contacto.html'},
+  { httpMethod: 'get', name: '/detalles', route: 'front/public/detalles.html'},
+  { httpMethod: 'get', name: '/', route: 'front/public/index.html'},
+  { httpMethod: 'get', name: '/inicio', route: 'front/public/inicio.html'},
+  { httpMethod: 'get', name: '/pedidos', route: 'front/public/pedidos.html'}
+]
 
-    return rutas[rut]
-
- }
-
- module.exports = routes
+module.exports = routes
