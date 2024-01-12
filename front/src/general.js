@@ -6,17 +6,10 @@ function updateToSection(evt) {
   const sectionName = targetButton.name;
   const mainSection = document.querySelector('#mainSection');
 
-  fetch('index')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Error ${response.status}: ${response.statusText}`);
-    }
-    return response.text();
-  })
-    .then(indexHtml => {
-          mainSection.innerHTML = indexHtml;
-    })
-    .catch(error => console.error(error));
+  fetch(sectionName)
+  .then(res => res.text())
+  .then(html => mainSection.innerHTML = html )
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
