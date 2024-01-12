@@ -8,7 +8,7 @@ const routes = [
   { httpMethod: 'post', name: '/contacto', route: 'front/public/contacto.html'},
   { httpMethod: 'post', name: '/detalles', route: 'front/public/detalles.html'},
   { httpMethod: 'post', name: '/inicio', route: 'front/public/inicio.html'},
-  { httpMethod: 'post', name: '/pedidos', route: 'front/public/pedidos.html'}
+  { httpMethod: 'post', name: '/pedidos', route: 'front/public/pedidos.html'},
 ]
 
 module.exports = routes
