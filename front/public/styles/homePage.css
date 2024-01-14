@@ -1,4 +1,8 @@
 
+@font-face {
+  font-family:'lemon';
+  src: url(../libraris/Lemon-Regular.ttf);
+}
 
 
 .descuento{
@@ -34,6 +38,21 @@
 }
 .h2-homePage {
   margin: 20px 0;
+  font-family:'Lemon';
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.h2-vistas{
+  margin: 20px 0;
+  font-size: 25px;
+  font-family: 'calibri';
+  color: #000000c5;
+}
+
+.h2-encargos{
+  font-family: 'calibri';
+  color: #000000c5;
 }
 
 .box-text1 {
@@ -115,39 +134,39 @@
 
 .vistas-compra1{
   background-image:url(../assets/images.jpeg );
-  background-position: center;
+ 
 
 }
 
 .vistas-compra2{
   background-image:url(../assets/images1.jpeg );
-  background-position: center;
+ 
 }
 .vistas-compra3{
   background-image:url(../assets/images2.jpeg );
-  background-position: center;
+ 
 
 }
 .vistas-compra4{
   background-image:url(../assets/images3.jpeg );
-  background-position: center;
+ 
 }
 .vistas-compra5{
   background-image:url(../assets/images4.jpeg );
-  background-position: center;
+ 
 
 }
 .vistas-compra6{
   background-image:url(../assets/images5.jpeg );
-  background-position: center;
+ 
 }
 .vistas-compra7{
   background-image:url(../assets/images6.jpeg );
-  background-position: center;
+ 
 }
 .vistas-compra8{
   background-image:url(../assets/images7.jpg );
-  background-position: center;
+ 
 }
 
 .regis-h3{
@@ -182,4 +201,9 @@
 
 .vistas-compra:hover{
   filter:brightness(60%);
+}
+
+.position {
+  background-position: center;
+  border-radius: 4px;
 }
