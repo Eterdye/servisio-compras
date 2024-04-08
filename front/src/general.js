@@ -1,28 +1,58 @@
 const buttons = document.querySelectorAll('.link-nav');
+const mainSection = document.getElementById('mainSection');
+import requireProducts from './modulo.js'
+
 
 function updateToSection(sectionName) {
+  // Añade la clase 'section-transition' para controlar la transición de opacidad
+  mainSection.classList.add('section-transition');
+
   fetch(sectionName, {
     headers: {
-      'Content-Type': 'text/html'
+      'Content-Type': 'text/html',
     },
-    method: 'POST'
+    method: 'POST',
   })
-    .then(res => res.text())
-    .then(html => mainSection.innerHTML = html )
+    .then((res) => res.text())
+    .then((html) => { 
+      // Actualiza el contenido de la sección
+      mainSection.innerHTML = html;
+      if(sectionName === 'pedidos'){
+        let order = document.getElementById('lista-de-productos')
+        requireProducts(order)
+      } else if (sectionName = 'inicio'){
+        
+      }
+      // Elimina la clase 'section-transition' después de un breve retraso para activar la transición
+      setTimeout(() => {
+        mainSection.classList.remove('section-transition');
+      }, 10);
+    });
 }
 
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
-  const sectionName = window.location.pathname.replace('\/', '') || 'inicio';
-
-  updateToSection(sectionName)
-});
-
-buttons.forEach((element) => element.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  const sectionName = event.target.name;
+  const sectionName = window.location.pathname.replace(/\//g, '') || 'inicio';
 
   updateToSection(sectionName);
+});
 
-  history.pushState(null, null, sectionName);
-}));
+buttons.forEach((element) =>
+  element.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const sectionName = event.target.name;
+
+    // Agrega la clase 'section-transition' antes de cambiar de sección
+    mainSection.classList.add('section-transition');
+
+    // Después de un breve retraso, realiza la transición y actualiza la sección
+    setTimeout(() => {
+      updateToSection(sectionName);
+      history.pushState(null, null, sectionName);
+    }, 300); // Ajusta el tiempo según la duración de tu transición CSS
+  })
+);
+

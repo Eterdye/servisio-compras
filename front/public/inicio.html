@@ -1,11 +1,13 @@
 <link rel="stylesheet" href="./public/styles/homePage.css" />
 <div class="main-page">
-  <h2 class="h2-homePage">Los panes de ricitos</h2>
+  <h2 class="h2-homePage" id="panes-ricitos">Los panes de ricitos</h2>
   <div class="image-container">
     <img src="./public/assets/helado.webp" class="img-descuento" alt="" />
     <div class="descuento">
       <p class="box-text1">Prueba y disfruta con todas nuestras opciones</p>
-      <button class="btn-pedido-home">Hacer un pedido</button>
+      <a class="btn-pedido-home" href="/pedidos" id="buildOrder"
+        >Hacer un pedido</a
+      >
     </div>
     <img src="./public/assets/torta.webp" class="img-descuento" alt="" />
     <div class="grid-container">
@@ -13,12 +15,18 @@
         <h2 class="h2-encargos">Encargos y diseños a tu gusto</h2>
         <!-- Contenido de la primera caja -->
       </div>
-      <div class="box2">
+      <div class="box2" id="panes-ricitos">
         <!-- Contenido de la segunda caja -->
-        <button class="btn-pedido-home btn-boxInf">Contacto</button>
+        <a class="btn-pedido-home btn-boxInf" href="/pedidos">Descuentos</a>
       </div>
       <div class="box3">
-        <button class="btn-pedido-home btn-boxInf">Descripcion</button>
+        <a
+          class="btn-pedido-home btn-boxInf"
+          href="/detalles"
+          id="detailsOrder"
+        >
+          Descripcion
+        </a>
         <!-- Contenido de la tercera caja -->
       </div>
     </div>

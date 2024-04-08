@@ -2,6 +2,7 @@ const express = require('express');
 const appInit = express();
 const path = require('path');
 const routes = require('./routes.js')
+const port = 8080;
 
 appInit.use(express.static(path.join(__dirname, 'front')));
 
@@ -12,7 +13,7 @@ routes.forEach((route) => {
 });
 
 
-appInit.listen(8080, () => {
+appInit.listen(port, () => {
   console.log('Server is running on port 8080');
 });
 
