@@ -1,4 +1,3 @@
-// conexion a la base de datos con todos los productos
 
 
 let allProducts = [
@@ -25,5 +24,6 @@ allProducts.forEach(product=>{
 })
 
 }
-
+ 
+function change(){}
 
