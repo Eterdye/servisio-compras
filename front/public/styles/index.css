@@ -60,7 +60,11 @@ a{
 }
 
 .logo{
-    width: 180px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-inicio{
@@ -112,3 +116,16 @@ top: 6px;
     opacity: 1;
   }
 
+  .trolley{
+    margin-left:10px;
+    margin-top: 22px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display:none;
+  }
+
+  .trolleyOn{   
+      transition: ease all .3s;
+      display:flex;
+  }

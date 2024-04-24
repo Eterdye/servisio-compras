@@ -1,11 +1,13 @@
 .pedidos {
     width:90%;
     height: 280px;
-    background-color:rgb(247, 233,228);
+    /* background-color:rgb(247, 233,228); */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 90px auto;
+    background:url("/public/assets/no-watermarck.jpg") bottom no-repeat;
+    color: white;
 }
 
 .pedidos-h3{
@@ -84,15 +86,17 @@
 .todos-los-productos div{
     height: 180px;
     border: 1px solid rgba(0, 0, 0, 0.473);
-    background-image:url('../assets/tortaP.jpg');
     background-repeat:no-repeat;
+    background-size:35% 100% ;
     background-position:right;
     background-color: #e9e9e9;
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 0.452);
     font-weight: bold;
     position: relative;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .todos-los-productos div .productos-texto{
@@ -131,3 +135,14 @@ width: 22%;
     left: 3%;
     width: 265px;
 }
+
+.add-product{
+    padding: 7px;
+    width: 25%;
+    position: absolute;
+    left:13%;
+    bottom:10px;
+    cursor: pointer;
+}
+
+

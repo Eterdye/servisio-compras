@@ -1,6 +1,7 @@
-const buttons = document.querySelectorAll('.link-nav');
+const buttons = document.querySelectorAll('.link-nav2');
 const mainSection = document.getElementById('mainSection');
-import requireProducts from './modulo.js'
+import {requireProducts,allProducts} from './modulo.js'
+
 
 
 function updateToSection(sectionName) {
@@ -19,6 +20,8 @@ function updateToSection(sectionName) {
       mainSection.innerHTML = html;
       if(sectionName === 'pedidos'){
         let order = document.getElementById('lista-de-productos')
+        let shoppingCart = document.getElementById('#shoppingCart')
+        requireShopingDiv(shoppingCart)
         requireProducts(order)
       } else if (sectionName = 'inicio'){
         
@@ -40,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 buttons.forEach((element) =>
+ { 
   element.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -53,6 +57,6 @@ buttons.forEach((element) =>
       updateToSection(sectionName);
       history.pushState(null, null, sectionName);
     }, 300); // Ajusta el tiempo según la duración de tu transición CSS
-  })
+  })}
 );
 
